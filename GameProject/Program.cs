@@ -22,7 +22,7 @@ namespace GameProject
             campaign.Type = "Small Campaign";
 
             CampaignManager campaignManager = new CampaignManager();
-            campaignManager.AddCampain(campaign);
+            campaignManager.Add(campaign);
 
             Game game = new Game();
             game.Id = 1;

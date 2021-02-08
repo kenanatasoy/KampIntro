@@ -32,3 +32,18 @@ select * from customers c left join orders o
 on c.CustomerID = o.CustomerID
 
 where o.CustomerID is null
+
+
+
+
+select count(*) numberofunitprices, UnitPrice from products group by UnitPrice order by unitprice asc
+
+select ProductName, UnitPrice from products order by unitprice asc
+
+select customerid, shipcountry from orders order by ShipCountry
+
+select count(distinct customerid) numberofcustomerspersc, shipcountry from orders group by shipcountry
+
+select p.Productname, sum(od.UnitPrice * od.Quantity) totalrevenueperproduct from Products p
+inner join [Order Details] od on od.ProductID = p.ProductID inner join orders o
+on od.OrderID = o.Orderid group by p.ProductName
